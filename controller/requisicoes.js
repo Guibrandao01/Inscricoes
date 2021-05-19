@@ -6,11 +6,9 @@ const connStr = config
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const cors = require('cors')
-const moment = require('moment');
-    
+const moment = require('moment'); 
 
 app.use(cors())
-
 module.exports = {
   async index(req, res) {
     sql.connect(connStr, function () {
